@@ -2,7 +2,7 @@
 
 Denne oppgaven er en innlevering i Algoritmer og Datastrukturer. 
 Oppgaven er levert av følgende studenter:
-* Navn Navnesen, S123456, s123456@oslomet.no
+* Karl Anders Eide Haugholt, s362061, s362061@oslomet.no
 * ...
 
 # Arbeidsfordeling
