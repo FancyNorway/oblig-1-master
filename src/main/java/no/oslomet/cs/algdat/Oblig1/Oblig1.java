@@ -42,6 +42,7 @@ public class Oblig1 {
         }
 
         int antallUlike = 1;
+        boolean bruktFor;
 
         // Logikken blir at vi skal bare legge til tallet første gang det er i tabellen
         // Dvs har vi [1,2,1]; er det bare 1 på plass 0  vi legger til
@@ -49,11 +50,16 @@ public class Oblig1 {
         // Gjør det det oppdater vi ikke antallUlike og omvendt.
 
         for(int i = 1; i < a.length; i++) {
-            for(int j = 1; j < a.length; j++) {
-                return 1;
+            bruktFor = false;
+            for(int j = i-1; j >= 0; j--) {
+                if (a[i] == a[j]) {
+                    bruktFor = true;
+                }
+            }
+            if (!bruktFor) {
+                antallUlike++;
             }
         }
-
         return antallUlike;
     }
 
