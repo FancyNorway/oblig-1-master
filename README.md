@@ -8,13 +8,17 @@ Oppgaven er levert av følgende studenter:
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
-* Per har hatt hovedansvar for oppgave 1, 3, og 5. 
-* Else har hatt hovedansvar for oppgave 2, 4, og 6. 
-* Fatima har hatt hovedansvar for oppgave 7 og 8. 
-* Vi har i fellesskap løst oppgave 10. 
+* Anders har hatt hovedansvar for oppgave 2.
+* Magnus har hatt hovedansvar for oppgave ...
+
 
 # Oppgavebeskrivelse
 
 I oppgave 1 så gikk vi frem ved å ...
 
-I oppgave 2 så brukte vi en ... til å ...
+I oppgave 2 så brukte vi først en enkel if til å sjekke om listen var tom.
+Så hadde vi to variabler for å holde på antall ulike og tallet vi var på.
+Så loopet vi gjennom arrayet og siden vi vet at vi i utgangspunktet skal
+få et sortert array vet vi at det er bare når neste verdi er større en
+den forrige at vi har en ny verdi. I tillegg la vi in en if på om den var
+mindre og da vet vi at listen ikke er sortert og sender en IllegalStateException.
