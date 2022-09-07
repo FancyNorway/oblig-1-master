@@ -75,11 +75,12 @@ public class Oblig1 {
             char temp = a[0];
             char temp2;
             for(int i = 0; i<a.length; i++){
-                temp2 = a[i+1];
+
                 if(i == a.length-1){
                     a[0] = temp;
                 }
                 else{
+                    temp2 = a[i+1];
                     a[i+1] = temp;
                     temp = temp2;
                 }
