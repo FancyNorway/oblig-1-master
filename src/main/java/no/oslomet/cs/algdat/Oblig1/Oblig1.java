@@ -18,7 +18,21 @@ public class Oblig1 {
 
     ///// Oppgave 2 //////////////////////////////////////
     public static int antallUlikeSortert(int[] a) {
-        throw new UnsupportedOperationException();
+        if (a.length == 0) {        // sjekker om tabell er tom
+            return 0;
+        }
+        int tall = a[0];
+        int antallUlike = 1;
+        for(int i = 1; i < a.length; i++) {
+            if (tall < a[i]) {
+                tall = a[i];
+                antallUlike++;
+            }
+            else if (tall > a[i]) {
+                throw new IllegalStateException("Listen er ikke sortert stigende");
+            }
+        }
+        return antallUlike;
     }
 
     ///// Oppgave 3 //////////////////////////////////////
