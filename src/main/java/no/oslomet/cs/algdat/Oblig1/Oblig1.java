@@ -71,15 +71,17 @@ public class Oblig1 {
     ///// Oppgave 5 //////////////////////////////////////
     public static void rotasjon(char[] a) {
 
-        if(a.length > 1){
-            char temp;
+        if(a.length >= 1){
+            char temp = a[0];
+            char temp2;
             for(int i = 0; i<a.length; i++){
-                temp = a[i];
+                temp2 = a[i+1];
                 if(i == a.length-1){
                     a[0] = temp;
                 }
                 else{
                     a[i+1] = temp;
+                    temp = temp2;
                 }
             }
         }
