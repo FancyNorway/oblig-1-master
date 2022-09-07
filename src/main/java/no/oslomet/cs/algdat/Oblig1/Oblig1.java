@@ -28,9 +28,7 @@ public class Oblig1 {
                 tall = a[i];
                 antallUlike++;
             }
-            else if (tall > a[i]) {
-                throw new IllegalStateException("Listen er ikke sortert stigende");
-            }
+
         }
         return antallUlike;
     }
