@@ -32,3 +32,10 @@ Dette gjør vi ved å sjekke om tallet står til venste får seg seg i tabellen
 Gjør det ikke det oppdater vi antallUlike ved å legge til en (antallUlike++),
 men gjør det det som i eksempelet over altså 1 på plass 2 har et 1 tall til venste
 skjer det ingen ting.
+
+I oppgave 5 så brukte vi en een enkel if-statement til å sjekke om listen var tom eller 
+hadde elementer i seg. Vi brukte to temp variabler. Den første tempen startet med verdien til
+a[0] og den andre ble bare initiert før for løkken. I For løkken sjekker vi først om man er ved 
+siste plass i tabellen, i såfall setter man a[0] lik temp verdien. Ellers lagrer man verdien til
+a[i+1] før man setter a[i+1] lik temp-verdien. Deretter blir temp verdien satt = temp2 verdien
+som var den gamle a[i+1] verdien. Deretter blir loopen kjørt på nytt.
