@@ -37,7 +37,24 @@ public class Oblig1 {
 
     ///// Oppgave 3 //////////////////////////////////////
     public static int antallUlikeUsortert(int[] a) {
-        throw new UnsupportedOperationException();
+        if (a.length == 0) {        // sjekker om tabell er tom
+            return 0;
+        }
+
+        int antallUlike = 1;
+
+        // Logikken blir at vi skal bare legge til tallet første gang det er i tabellen
+        // Dvs har vi [1,2,1]; er det bare 1 på plass 0  vi legger til
+        // Dette gjør vi ved å sjekke om tallet står til venste får seg seg i tabellen
+        // Gjør det det oppdater vi ikke antallUlike og omvendt.
+
+        for(int i = 1; i < a.length; i++) {
+            for(int j = 1; j < a.length; j++) {
+                return 1;
+            }
+        }
+
+        return antallUlike;
     }
 
     ///// Oppgave 4 //////////////////////////////////////
