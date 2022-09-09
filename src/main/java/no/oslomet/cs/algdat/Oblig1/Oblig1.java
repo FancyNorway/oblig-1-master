@@ -205,20 +205,23 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
-        int tempIndex;
-        int tempMinst;
-        int[] index = new int[a.length];
 
-        for(int i = 0; i< a.length; i++){
-            tempMinst = a[i];
-            for(int j = 0; j< a.length; j++){
-                if(a[j] < tempMinst){
-                    tempMinst = a[j];
-                    tempIndex = j;
+        int[] b = a.clone();
+        int[] index = new int[a.length];
+        quicksort(b, 0, b.length-1);
+        if(a.length>0){
+            for(int i = 0; i< a.length; i++){
+
+                for(int j = 0; j< a.length; j++){
+                    if(b[i] == a[j]){
+                        index[i] = a[j];
+                    }
                 }
+
             }
-            index[i] = tempIndex;
+            return index;
         }
+        return index;
     }
 
     ///// Oppgave 9 //////////////////////////////////////
