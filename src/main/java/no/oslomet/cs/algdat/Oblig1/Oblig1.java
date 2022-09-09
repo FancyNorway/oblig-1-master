@@ -89,6 +89,10 @@ public class Oblig1 {
                 }
             }
         }
+        // Sjekker hvis det bare er oddetall i Arrayet og setter i++ slik at man kan sortere hele arrayet
+        if (i == a.length-1) {
+            i++;
+        }
 
         // Sorterer oddetall
         for(int p = i-1; p > 0; p--) {
@@ -101,21 +105,10 @@ public class Oblig1 {
             int m = maks(a,i, o+1);
             int temp = a[o]; a[o] = a[m]; a[m] = temp;          // Bytter plass på Elementene
         }
-
-
-
     }
     // Metoden maks(int[] a, int fra, int til)   Programkode 1.2.1 b)
     public static int maks(int[] a, int fra, int til)
     {
-        if (a.length == 0) {
-            throw new NoSuchElementException
-                    ("Listen er tom!");
-        }
-        if (fra == til) {
-            throw new NoSuchElementException
-                    ("fra(" + fra + ") = til(" + til + ") - tomt tabellintervall!");
-        }
         int m = fra;              // indeks til største verdi i a[fra:til>
         int maksverdi = a[fra];   // største verdi i a[fra:til>
 
