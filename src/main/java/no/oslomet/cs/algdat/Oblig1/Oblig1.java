@@ -205,7 +205,20 @@ public class Oblig1 {
 
     ///// Oppgave 8 //////////////////////////////////////
     public static int[] indekssortering(int[] a) {
-        throw new UnsupportedOperationException();
+        int tempIndex;
+        int tempMinst;
+        int[] index = new int[a.length];
+
+        for(int i = 0; i< a.length; i++){
+            tempMinst = a[i];
+            for(int j = 0; j< a.length; j++){
+                if(a[i] < tempMinst){
+                    tempMinst = a[i];
+                    tempIndex = i;
+                }
+            }
+            index[i] = tempIndex;
+        }
     }
 
     ///// Oppgave 9 //////////////////////////////////////
