@@ -33,6 +33,16 @@ Gjør det ikke det oppdater vi antallUlike ved å legge til en (antallUlike++),
 men gjør det det som i eksempelet over altså 1 på plass 2 har et 1 tall til venste
 skjer det ingen ting.
 
+I oppgave 4 så brukte vi først en enkel if til å sjekke om listen var tom.
+Deretter hadde vi en partisjon metode som sorterer oddetall til venste 
+og partall til høyere. Fordi verdiene i og j kommer i utgangspunktet 
+der det første partallet skal være (i index) må vi sjekke om det bare
+er oddetall i arrayet. Siden den største veriden av i = a.length og
+når vi sender  den inn i sorteringsalgoritmen tar vi i-1  så  vi plusse 
+på en får å få sortert alle verdiene. Etter dette sorterer vi oddetallene 
+og partallene hver for seg med en quicksort algoritme. Denne quicksorten er
+simpel og beyntter seg av å bruke verdien legst til høyere som pivot.
+
 I oppgave 5 så brukte vi en een enkel if-statement til å sjekke om listen var tom eller 
 hadde elementer i seg. Vi brukte to temp variabler. Den første tempen startet med verdien til
 a[0] og den andre ble bare initiert før for løkken. I For løkken sjekker vi først om man er ved 
