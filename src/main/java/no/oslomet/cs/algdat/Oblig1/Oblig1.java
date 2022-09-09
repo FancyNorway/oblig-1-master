@@ -95,10 +95,7 @@ public class Oblig1 {
         }
 
         // Sorterer oddetall
-        for(int p = i-1; p > 0; p--) {
-            int m = maks(a,0, p+1);
-            int temp = a[p]; a[p] = a[m]; a[m] = temp;          // Bytter plass på Elementene
-        }
+        quicksort(a, 0, i-1);
 
         // Sorterer partall
         for(int o = a.length-1; o > i; o--) {
@@ -120,7 +117,39 @@ public class Oblig1 {
                 maksverdi = a[m];     // største verdi oppdateres
             }
         }
+
         return m;  // posisjonen til største verdi i a[fra:til>
+    }
+    // quicksort
+    public static void quicksort(int[] a, int fra, int til)
+    {
+        if (fra > til) {
+            return;
+        }
+
+        // partisjoner
+        int six = partisjoner(a, fra, til);
+
+        quicksort(a, fra, six-1);
+        quicksort(a, six+1, til);
+    }
+    public static int partisjoner(int[] a, int fra, int til)
+    {
+        // Bruker siste element som pivot
+        int pivot = a[til];
+        int i = fra-1;
+
+        //Fjerner partisjoner
+        for (int l = fra; l < til;  l++) {
+            if (a[l] <= pivot) {
+                i++;
+                int temp = a[i]; a[i] = a[l]; a[l] = temp;
+            }
+        }
+        // Setter pivoten der den skal være i tabellen
+        i++;
+        int temp = a[i]; a[i] = pivot; a[til] = temp;
+        return i;
     }
 
     ///// Oppgave 5 //////////////////////////////////////
