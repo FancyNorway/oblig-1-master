@@ -174,7 +174,46 @@ public class Oblig1 {
 
     ///// Oppgave 6 //////////////////////////////////////
     public static void rotasjon(char[] a, int k) {
-        throw new UnsupportedOperationException();
+
+        if(a.length >= 1 && k != 0){
+
+            char temp2;
+
+                if(k>0){
+                    int index = 0;
+                    char temp = a[0];
+                    for(int i = 0; i<a.length; i++){
+
+                        if(i+k >= a.length){
+                            a[index] = temp;
+                            index++;
+                        }
+                        else{
+                            temp2 = a[i+k];
+                            a[i+k] = temp;
+                            temp = temp2;
+                        }
+                    }
+                }
+
+                else{
+                    char temp = a[a.length-1];
+                    int index = a.length-1;
+                    for (int i = a.length-1; i>=0; i--){
+
+                        if(i+k < 0){
+                            a[index] = temp;
+                            index--;
+                        }
+                        else{
+                            temp2 = a[i+k];
+                            a[i+k] = temp;
+                            temp = temp2;
+                        }
+                    }
+                }
+
+        }
     }
 
     ///// Oppgave 7 //////////////////////////////////////
