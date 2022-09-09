@@ -3,6 +3,7 @@ package no.oslomet.cs.algdat.Oblig1;
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
 import java.lang.UnsupportedOperationException;
+import java.util.NoSuchElementException;
 
 public class Oblig1 {
     private Oblig1() {}
@@ -89,6 +90,44 @@ public class Oblig1 {
 
         //Sorterer de to "del arrayene"
 
+        // Sorterer oddetall
+        for(int p = i-1; p > 0; p--) {
+            int m = maks(a,0, p+1);
+            int temp = a[p]; a[p] = a[m]; a[m] = temp;          // Bytter plass på Elementene
+        }
+
+        // Sorterer partall
+        for(int o = a.length-1; o > i; o--) {
+            int m = maks(a,i, o+1);
+            int temp = a[o]; a[o] = a[m]; a[m] = temp;          // Bytter plass på Elementene
+        }
+
+
+
+    }
+    // Metoden maks(int[] a, int fra, int til)   Programkode 1.2.1 b)
+    public static int maks(int[] a, int fra, int til)
+    {
+        if (a.length == 0) {
+            throw new NoSuchElementException
+                    ("Listen er tom!");
+        }
+        if (fra == til) {
+            throw new NoSuchElementException
+                    ("fra(" + fra + ") = til(" + til + ") - tomt tabellintervall!");
+        }
+        int m = fra;              // indeks til største verdi i a[fra:til>
+        int maksverdi = a[fra];   // største verdi i a[fra:til>
+
+        for (int i = fra + 1; i < til; i++)
+        {
+            if (a[i] > maksverdi)
+            {
+                m = i;                // indeks til største verdi oppdateres
+                maksverdi = a[m];     // største verdi oppdateres
+            }
+        }
+        return m;  // posisjonen til største verdi i a[fra:til>
     }
 
     ///// Oppgave 5 //////////////////////////////////////
