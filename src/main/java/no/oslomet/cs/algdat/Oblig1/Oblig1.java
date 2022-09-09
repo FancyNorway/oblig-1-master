@@ -212,9 +212,9 @@ public class Oblig1 {
         for(int i = 0; i< a.length; i++){
             tempMinst = a[i];
             for(int j = 0; j< a.length; j++){
-                if(a[i] < tempMinst){
-                    tempMinst = a[i];
-                    tempIndex = i;
+                if(a[j] < tempMinst){
+                    tempMinst = a[j];
+                    tempIndex = j;
                 }
             }
             index[i] = tempIndex;
