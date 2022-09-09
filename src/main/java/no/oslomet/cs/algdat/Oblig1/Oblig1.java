@@ -65,7 +65,11 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
-        throw new UnsupportedOperationException();
+        //lager en metode som sorterer oddetall til venste og partall til høyere (partisjon)
+
+
+        //Sorterer de to "del arrayene"
+
     }
 
     ///// Oppgave 5 //////////////////////////////////////
