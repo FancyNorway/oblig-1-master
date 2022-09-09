@@ -214,7 +214,7 @@ public class Oblig1 {
 
                 for(int j = 0; j< a.length; j++){
                     if(b[i] == a[j]){
-                        index[i] = a[j];
+                        index[i] = j;
                     }
                 }
 
