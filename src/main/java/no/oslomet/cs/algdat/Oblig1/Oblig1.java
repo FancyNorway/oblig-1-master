@@ -65,8 +65,27 @@ public class Oblig1 {
 
     ///// Oppgave 4 //////////////////////////////////////
     public static void delsortering(int[] a) {
-        //lager en metode som sorterer oddetall til venste og partall til høyere (partisjon)
+        // lager en metode som sorterer oddetall til venste og partall til høyere (partisjon)
+        int i = 0;
+        int j = a.length-1;
 
+
+        while (i != j) {
+            if (a[i] % 2 == 1 || a[i] % 2 == -1)  {               // Hvis odetall
+                i++;
+            }
+            else if (a[i] % 2 == 0) {         //Hvis partall
+                if (a[j] % 2 == 1 || a[j] % 2 == -1)  {
+                    int temp = a[i]; a[i] = a[j]; a[j] = temp;      // Bytter plass på Elementene
+                    i++;
+                } else {
+                    j--;
+                }
+            }
+        }
+        // Midlertidig utskrift av svarene
+        System.out.println(i);
+        System.out.println(j);
 
         //Sorterer de to "del arrayene"
 
