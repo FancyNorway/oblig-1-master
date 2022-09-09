@@ -185,7 +185,7 @@ public class Oblig1 {
                     for(int i = 0; i<a.length; i++){
 
                         if(i+k >= a.length){
-                            a[index] = temp;
+                            a[index] = a[i];
                             index++;
                         }
                         else{
@@ -202,7 +202,7 @@ public class Oblig1 {
                     for (int i = a.length-1; i>=0; i--){
 
                         if(i+k < 0){
-                            a[index] = temp;
+                            a[index] = a[i];
                             index--;
                         }
                         else{
