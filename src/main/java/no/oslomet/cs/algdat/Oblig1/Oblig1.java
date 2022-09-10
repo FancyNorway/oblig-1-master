@@ -269,7 +269,7 @@ public class Oblig1 {
             for(int i = 0; i<s.length; i++){
                 for(int j = 0; j<length; j++){
                     if(s[j].length() > j){
-                        nyString+=getCharFromStringArray(i, j, s);
+                        nyString+=getCharFromStringArray(j, i, s);
                     }
                 }
 
@@ -280,7 +280,7 @@ public class Oblig1 {
         return nyString;
     }
 
-    public static char getCharFromStringArray(int i, int j, String... s){
+    public static char getCharFromStringArray(int j, int i, String... s){
         return s[j].charAt(i);
     }
 
@@ -293,8 +293,6 @@ public class Oblig1 {
                 s[i] = temp;
             }
         }
-        int length = s[s.length-1].length();
-        System.out.println(length);
 
         return s[s.length-1].length();
     }
