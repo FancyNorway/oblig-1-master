@@ -227,31 +227,36 @@ public class Oblig1 {
     /// 7a)
     public static String flett(String s, String t) {
         String nyString = "";
-        if(s.length() > 0 || t.length() > 0){
+        if(s.length() > 0 && t.length() > 0){
             if(s.length() > t.length()){
                 for(int i = 0; i< s.length(); i++){
                     nyString+= getCharFromStringS(s, i);
-                    nyString+=getCharFromStringT(t, i);
+
+                    if(t.length() > i){
+                        nyString+=getCharFromStringT(t, i);
+                    }
+
                 }
             }
             else{
                 for(int i = 0; i<t.length(); i++){
-                    nyString+= getCharFromStringS(s, i);
+                    if(s.length() > i){
+                        nyString+=getCharFromStringT(s, i);
+                    }
                     nyString+=getCharFromStringT(t, i);
                 }
             }
 
             return nyString;
         }
-
+        nyString+=s;
+        nyString+=t;
         return nyString;
         }
     public static char getCharFromStringS(String s, int i){
-
         return s.charAt(i);
     }
     public static char getCharFromStringT(String t, int i){
-
         return t.charAt(i);
     }
 
