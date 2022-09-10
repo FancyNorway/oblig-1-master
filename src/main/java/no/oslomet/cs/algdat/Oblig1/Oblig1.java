@@ -187,15 +187,11 @@ public class Oblig1 {
     public static void rotasjon(char[] a, int k) {
 
         if(a.length > 1 && k != 0){
-            char b[] = new char[a.length];
-
-            for (int i = 0; i< a.length; i++){
-                b[i] = a[i];
-            }
+            char b[] = a.clone();
 
                 if(k>0){
                     int index = 0;
-                    for(int i = 0; i<a.length; i++){
+                    for(int i = index; i<a.length; i++){
 
                         if(i+k >= a.length){
                             a[index] = b[i];
@@ -209,7 +205,7 @@ public class Oblig1 {
 
                 else{
                     int index = a.length-1;
-                    for (int i = a.length-1; i>=0; i--){
+                    for (int i = index; i>=0; i--){
                         if(i+k < 0){
                             a[index] = b[i];
                             index--;

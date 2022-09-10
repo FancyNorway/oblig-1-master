@@ -43,9 +43,30 @@ på en får å få sortert alle verdiene. Etter dette sorterer vi oddetallene
 og partallene hver for seg med en quicksort algoritme. Denne quicksorten er
 simpel og beyntter seg av å bruke verdien legst til høyere som pivot.
 
-I oppgave 5 så brukte vi en een enkel if-statement til å sjekke om listen var tom eller 
+I oppgave 5 så brukte vi en enkel if-statement til å sjekke om listen var tom eller 
 hadde elementer i seg. Vi brukte to temp variabler. Den første tempen startet med verdien til
 a[0] og den andre ble bare initiert før for løkken. I For løkken sjekker vi først om man er ved 
 siste plass i tabellen, i såfall setter man a[0] lik temp verdien. Ellers lagrer man verdien til
 a[i+1] før man setter a[i+1] lik temp-verdien. Deretter blir temp verdien satt = temp2 verdien
 som var den gamle a[i+1] verdien. Deretter blir loopen kjørt på nytt.
+
+I oppgave 6 sjekket vi først om lengden til a var over 1 og at k!=0, hvis dette er
+tilfellet vil ikke rotasjonen ha noe effekt. Deretter lagde vi array b ved å klone 
+a. Så sjekker vi om k er positiv eller negativ. Hvis k er positiv har vi en
+index int = 0, og hvis k er negativ setter vi index = a.length-1. Fortegnet til k
+bestemmer om vi roterer mot høyre eller til venstre. og bestemmer derfor om vi 
+starter for-løkken fra 0 eller fra a.length-1. Inne i for-løkken sjekker vi først om
+i+k blir index-out-of-bounds. Hvis dette er tilfellet så betyr det at de neste 
+verdiene vil ende opp på andre siden av arrayet. For å holde styr på posisjonen til 
+disse verdiene bruker vi index-variablen. Vi henter også de verdiene fra det klonede 
+arrayet slik at man slipper k-antall temp-variabler.
+
+I oppgave 7
+
+I oppgave 8 så klonet vi først arrayet a, og lagde deretter et array index med samme 
+lengde som a. Deretter brukte vi en quicksort metode for å sortere tabellen b i 
+stigende rekkefølge. Deretter brukte vi en if statement for å se at a hadde en
+lengde lenger enn 0. Etter dette brukte vi to for-løkker som gikk gjennom det sorterte
+arrayet b og sjekket hvor i a de hadde samme tall. deretter satte vi inn index-en til
+der tallene matchet hverandre inn i index-tabellen. Etter dette ble
+index-tabellen returnert
