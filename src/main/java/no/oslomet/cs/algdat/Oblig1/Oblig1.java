@@ -268,18 +268,35 @@ public class Oblig1 {
             int length = findLengthOfLongestString(s);
             for(int i = 0; i<s.length; i++){
                 for(int j = 0; j<length; j++){
-
+                    if(s[j].length() > j){
+                        nyString+=getCharFromStringArray(i, j, s);
+                    }
                 }
 
-
             }
-
+            return nyString;
         }
 
         return nyString;
     }
-    public static int findLengthOfLongestString(String... s){
 
+    public static char getCharFromStringArray(int i, int j, String... s){
+        return s[j].charAt(i);
+    }
+
+    public static int findLengthOfLongestString(String... s){
+        String temp;
+        for(int i = 0; i<s.length-1; i++){
+            if(s[i].length() > s[i+1].length()){
+                temp = s[i+1];
+                s[i+1] = s[i];
+                s[i] = temp;
+            }
+        }
+        int length = s[s.length-1].length();
+        System.out.println(length);
+
+        return s[s.length-1].length();
     }
 
     ///// Oppgave 8 //////////////////////////////////////
