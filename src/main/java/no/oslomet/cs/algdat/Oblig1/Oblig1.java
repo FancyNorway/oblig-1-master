@@ -10,11 +10,27 @@ public class Oblig1 {
 
     ///// Oppgave 1 //////////////////////////////////////
     public static int maks(int[] a) {
-        throw new UnsupportedOperationException();
+
+        if(a.length != 0){
+            int temp;
+            for(int i = 0; i<a.length-1; i++){
+                if(a[i] > a[i+1]){
+                    temp = a[i+1];
+                    a[i+1] = a[i];
+                    a[i] = temp;
+                }
+            }
+
+            return a[a.length-1];
+        }
+        else{
+          throw new NoSuchElementException("Det er ingen maksverdi i tabellen, fordi tabellen ikke har noen verdier");
+        }
+
     }
 
     public static int ombyttinger(int[] a) {
-        throw new UnsupportedOperationException();
+
     }
 
     ///// Oppgave 2 //////////////////////////////////////
