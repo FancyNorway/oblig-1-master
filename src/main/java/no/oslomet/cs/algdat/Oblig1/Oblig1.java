@@ -266,14 +266,16 @@ public class Oblig1 {
 
         if(s.length > 0){
             int length = findLengthOfLongestString(s);
-            for(int i = 0; i<s.length; i++){
-                for(int j = 0; j<length; j++){
-                    if(s[j].length() > j){
+            for(int i = 0; i<length+1; i++){
+                for(int j = 0; j<s.length; j++){
+                    if(s[j].length() > i){
                         nyString+=getCharFromStringArray(j, i, s);
+
                     }
                 }
 
             }
+
             return nyString;
         }
 
@@ -286,15 +288,16 @@ public class Oblig1 {
 
     public static int findLengthOfLongestString(String... s){
         String temp;
-        for(int i = 0; i<s.length-1; i++){
-            if(s[i].length() > s[i+1].length()){
-                temp = s[i+1];
-                s[i+1] = s[i];
-                s[i] = temp;
+        String[] b = s.clone();
+        for(int i = 0; i<b.length-1; i++){
+            if(b[i].length() > b[i+1].length()){
+                temp = b[i+1];
+                b[i+1] = b[i];
+                b[i] = temp;
             }
         }
 
-        return s[s.length-1].length();
+        return b[b.length-1].length();
     }
 
     ///// Oppgave 8 //////////////////////////////////////
