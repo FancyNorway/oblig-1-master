@@ -226,7 +226,33 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        throw new UnsupportedOperationException();
+        String nyString = "";
+        if(s.length() > 0 || t.length() > 0){
+            if(s.length() > t.length()){
+                for(int i = 0; i< s.length(); i++){
+                    nyString+= getCharFromStringS(s, i);
+                    nyString+=getCharFromStringT(t, i);
+                }
+            }
+            else{
+                for(int i = 0; i<t.length(); i++){
+                    nyString+= getCharFromStringS(s, i);
+                    nyString+=getCharFromStringT(t, i);
+                }
+            }
+
+            return nyString;
+        }
+
+        return nyString;
+        }
+    public static char getCharFromStringS(String s, int i){
+
+        return s.charAt(i);
+    }
+    public static char getCharFromStringT(String t, int i){
+
+        return t.charAt(i);
     }
 
     /// 7b)
