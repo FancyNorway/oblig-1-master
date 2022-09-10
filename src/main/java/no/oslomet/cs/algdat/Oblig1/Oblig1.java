@@ -262,7 +262,24 @@ public class Oblig1 {
 
     /// 7b)
     public static String flett(String... s) {
-        throw new UnsupportedOperationException();
+        String nyString = "";
+
+        if(s.length > 0){
+            int length = findLengthOfLongestString(s);
+            for(int i = 0; i<s.length; i++){
+                for(int j = 0; j<length; j++){
+
+                }
+
+
+            }
+
+        }
+
+        return nyString;
+    }
+    public static int findLengthOfLongestString(String... s){
+
     }
 
     ///// Oppgave 8 //////////////////////////////////////
