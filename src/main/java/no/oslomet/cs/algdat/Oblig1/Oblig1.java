@@ -30,7 +30,22 @@ public class Oblig1 {
     }
 
     public static int ombyttinger(int[] a) {
-
+        if(a.length != 0){
+            int antall = 0;
+            int temp;
+            for(int i = 0; i<a.length-1; i++){
+                if(a[i] > a[i+1]){
+                    antall++;
+                    temp = a[i+1];
+                    a[i+1] = a[i];
+                    a[i] = temp;
+                }
+            }
+            return antall;
+        }
+        else{
+            throw new NoSuchElementException("Det er ingen maksverdi i tabellen, fordi tabellen ikke har noen verdier");
+        }
     }
 
     ///// Oppgave 2 //////////////////////////////////////
