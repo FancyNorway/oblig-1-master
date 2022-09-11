@@ -15,6 +15,9 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 # Oppgavebeskrivelse
 
 I oppgave 1 så gikk vi frem ved å ...
+• Når blir det flest ombyttinger?
+• Når blir det færrest?
+• Hvor mange blir det i gjennomsnitt?
 
 
 I oppgave 2 så brukte vi først en enkel if til å sjekke om listen var tom.
