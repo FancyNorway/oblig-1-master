@@ -222,14 +222,14 @@ public class Oblig1 {
     ///// Oppgave 7 //////////////////////////////////////
     /// 7a)
     public static String flett(String s, String t) {
-        String nyString = "";
+        StringBuilder nyString = new StringBuilder();
         if(s.length() > 0 && t.length() > 0){
             if(s.length() > t.length()){
                 for(int i = 0; i< s.length(); i++){
-                    nyString+= getCharFromStringS(s, i);
+                    nyString.append(getCharFromStringS(s, i));
 
                     if(t.length() > i){
-                        nyString+=getCharFromStringT(t, i);
+                        nyString.append(getCharFromStringT(t, i));
                     }
 
                 }
@@ -237,17 +237,17 @@ public class Oblig1 {
             else{
                 for(int i = 0; i<t.length(); i++){
                     if(s.length() > i){
-                        nyString+=getCharFromStringT(s, i);
+                        nyString.append(getCharFromStringT(s, i));
                     }
-                    nyString+=getCharFromStringT(t, i);
+                    nyString.append(getCharFromStringT(t, i));
                 }
             }
 
-            return nyString;
+            return nyString.toString();
         }
-        nyString+=s;
-        nyString+=t;
-        return nyString;
+        nyString.append(s);
+        nyString.append(t);
+        return nyString.toString();
         }
     public static char getCharFromStringS(String s, int i){
         return s.charAt(i);
