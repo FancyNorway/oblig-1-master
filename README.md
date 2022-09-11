@@ -8,17 +8,24 @@ Oppgaven er levert av følgende studenter:
 # Arbeidsfordeling
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
-* Anders har hatt hovedansvar for oppgave 2.
+* Anders har hatt hovedansvar for oppgave 2,3,4.
 * Magnus har hatt hovedansvar for oppgave ...
-
 
 # Oppgavebeskrivelse
 
 I oppgave 1 så gikk vi frem ved å ...
 
 • Når blir det flest ombyttinger?
+    Det blir flest ombyttinger når arrayet har det støreste tallet 
+    til venstre. Eks. [5,4,3,2,1], [10,7,1,2,6,-1,2] - da må det byttes
+    Da må vi bytte for hver sammenligning altså n-1 ganger. (n er arr.length)
+
 • Når blir det færrest?
+    Det blir flest ombyttinger når arrayet allerede er sortert i  stigende
+    rekkefølge Eks. [1,2,3,4], [-1,8,16,32] - da blir det ingen ombyttinger
+
 • Hvor mange blir det i gjennomsnitt?
+    
 
 
 I oppgave 2 så brukte vi først en enkel if til å sjekke om listen var tom.
