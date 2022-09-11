@@ -20,7 +20,7 @@ class Oblig1UnitTest {
     void ombyttinger() {
         double snitt = 0;
         for (int i = 0; i<1000000; i++) {
-            int[] a = randPerm(1000); // tilfeldig permutasjon av 1 . . 20
+            int[] a = randPerm(20); // tilfeldig permutasjon av 1 . . 20
             snitt += Oblig1.ombyttinger(a);
         }
         snitt = snitt/1000000;

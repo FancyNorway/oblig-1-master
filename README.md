@@ -13,7 +13,11 @@ I oppgaven har vi hatt følgende arbeidsfordeling:
 
 # Oppgavebeskrivelse
 
-I oppgave 1 så gikk vi frem ved å ...
+I oppgave 1 så gikk vi frem ved å først skrive en enkel sjekk for om lengden
+er 0 da sendder vi en NoSuchElementException. På maks bruker vi bobling og
+utfører en iterasjon og retunerer verdien helt til venstre (a.length-1).
+På ombyttinger metoden gjør vi akkurat det samme bare at vi har lagt til en variabel
+antall som teller antall ombyttingen som utføres i for loopen/boblings iterasjonen.
 
 • Når blir det flest ombyttinger?
     Det blir flest ombyttinger når arrayet har det støreste tallet 
