@@ -187,7 +187,7 @@ public class Oblig1 {
     public static void rotasjon(char[] a, int k) {
 
         if(a.length > 1 && k != 0){
-            char b[] = a.clone();
+            char[] b = a.clone();
 
                 if(k>0){
                     int index = 0;
