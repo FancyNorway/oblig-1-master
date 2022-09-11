@@ -25,7 +25,14 @@ I oppgave 1 så gikk vi frem ved å ...
     rekkefølge Eks. [1,2,3,4], [-1,8,16,32] - da blir det ingen ombyttinger
 
 • Hvor mange blir det i gjennomsnitt?
-    
+    I gjennomsnitt blir det ca. n-(ln(n)+0.577). Dette kommer vi frem til ved 
+    tenke at det blir n ombyttinger minus alle gangene i snitt alle tallene er større
+    enn alle tallene forran seg selv. Fordi da kan vi altså trekke fra denne
+    ombyttingen. Dette skjer altså 1 gang på det første tallet. En 1/2 gang for det 
+    andre tallet. 1/3 for det tredje, 1/4 for det fjerde osv. 
+    Dette danner den harmoniske serien H_n. 
+    Vi vet at Summen av dden harmoniske serien er ca lik ln(n)+0.577.
+    Altså får vi n-(ln(n)+0.577)
 
 
 I oppgave 2 så brukte vi først en enkel if til å sjekke om listen var tom.
