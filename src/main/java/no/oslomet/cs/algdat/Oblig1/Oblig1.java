@@ -85,6 +85,7 @@ public class Oblig1 {
             for(int j = i-1; j >= 0; j--) {
                 if (a[i] == a[j]) {
                     bruktFor = true;
+                    break;
                 }
             }
             if (!bruktFor) {
