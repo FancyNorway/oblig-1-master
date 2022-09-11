@@ -9,7 +9,7 @@ Oppgaven er levert av følgende studenter:
 
 I oppgaven har vi hatt følgende arbeidsfordeling:
 * Anders har hatt hovedansvar for oppgave 2,3,4.
-* Magnus har hatt hovedansvar for oppgave ...
+* Magnus har hatt hovedansvar for oppgave 1, 5, 6, 7, 8.
 
 # Oppgavebeskrivelse
 
