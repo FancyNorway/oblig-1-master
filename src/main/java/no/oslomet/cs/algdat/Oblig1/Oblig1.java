@@ -258,24 +258,24 @@ public class Oblig1 {
 
     /// 7b)
     public static String flett(String... s) {
-        String nyString = "";
+        StringBuilder nyString = new StringBuilder();
 
         if(s.length > 0){
             int length = findLengthOfLongestString(s);
             for(int i = 0; i<length+1; i++){
                 for(int j = 0; j<s.length; j++){
                     if(s[j].length() > i){
-                        nyString+=getCharFromStringArray(j, i, s);
+                        nyString.append(getCharFromStringArray(j, i, s));
 
                     }
                 }
 
             }
 
-            return nyString;
+            return nyString.toString();
         }
 
-        return nyString;
+        return nyString.toString();
     }
 
     public static char getCharFromStringArray(int j, int i, String... s){
