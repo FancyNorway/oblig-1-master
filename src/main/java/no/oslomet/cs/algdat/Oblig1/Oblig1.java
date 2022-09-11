@@ -2,7 +2,6 @@ package no.oslomet.cs.algdat.Oblig1;
 
 ////// Løsningsforslag Oblig 1 ////////////////////////
 
-import java.lang.UnsupportedOperationException;
 import java.util.NoSuchElementException;
 
 public class Oblig1 {
