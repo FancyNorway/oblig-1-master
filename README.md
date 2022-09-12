@@ -94,6 +94,17 @@ noe som er "out of bounds" fra stringen som er kortest. For å hente en ny bokst
 fra stringen, bruker vi en metode som henter ut bokstaven, som ligger i den posisjonen
 i er fra stringen.
 
+I oppgave 7b lager vi først en string der bokstavene fra flettingen skal legges inn.
+Deretter sjekke vi at lengden til arrayet er større enn ellers returneres bare en 
+tom string. Vi finner lengden av den lengste stringen i arrayet ved hjelp av 
+metoden findLengthOfLongestString. Deretter bruker vi en dobbel for-løkke for å 
+hente ut riktige bokstaver fra riktige strings i arrayet. i-holder styr på posisjonen
+til bokstavene i stringene, mens j holder styr på posisjonen til stringene i arrayet.
+Inne i den andre for-løkken har vi en if-statement som sjekker at lengden til stringet
+vi står på er større en index-en i stringet vi ønsker å lete. Hvis dette er tilfellet 
+vil vi brukte metoden getCharFromStringArray() for å finne riktig bokstav og sette den 
+i den nye stringen. Hvis det ikke er tilfellet skjer det ingen ting og for-løkken fortsetter.
+Når begge for-løkkene er ferduge så returneres den nye ferdig-flettede stringen.
 
 
 I oppgave 8 så klonet vi først arrayet a, og lagde deretter et array index med samme 
