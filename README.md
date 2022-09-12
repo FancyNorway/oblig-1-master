@@ -83,7 +83,18 @@ verdiene vil ende opp på andre siden av arrayet. For å holde styr på posisjon
 disse verdiene bruker vi index-variablen. Vi henter også de verdiene fra det klonede 
 arrayet slik at man slipper k-antall temp-variabler.
 
-I oppgave 7
+I oppgave 7a lager vi først en nyString, der resultate av flettingen skal settes inn.
+Deretter har vi en if statement som sjekker om et av stringene har lengde null.
+Hvis dette er tilfellet vil det ikke være nødvendig med fletting og det er bare
+å legge til stringene akkurat som de er i det nye stringet. Inne i if-statementet
+er det enda en if-statement som sjekker hvilken string som er lengst. Dette blir brukt
+inne i for-løkken for å sørge for at man får med alle bokstavene i stringene. Inne i 
+for-løkken er det enda en if-statement som sørger for at man ikke prøver å hente 
+noe som er "out of bounds" fra stringen som er kortest. For å hente en ny bokstav
+fra stringen, bruker vi en metode som henter ut bokstaven, som ligger i den posisjonen
+i er fra stringen.
+
+
 
 I oppgave 8 så klonet vi først arrayet a, og lagde deretter et array index med samme 
 lengde som a. Deretter brukte vi en quicksort metode for å sortere tabellen b i 

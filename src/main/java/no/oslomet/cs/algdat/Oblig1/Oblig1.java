@@ -226,10 +226,10 @@ public class Oblig1 {
         if(s.length() > 0 && t.length() > 0){
             if(s.length() > t.length()){
                 for(int i = 0; i< s.length(); i++){
-                    nyString.append(getCharFromStringS(s, i));
+                    nyString.append(getCharFromString(s, i));
 
                     if(t.length() > i){
-                        nyString.append(getCharFromStringT(t, i));
+                        nyString.append(getCharFromString(t, i));
                     }
 
                 }
@@ -237,9 +237,9 @@ public class Oblig1 {
             else{
                 for(int i = 0; i<t.length(); i++){
                     if(s.length() > i){
-                        nyString.append(getCharFromStringT(s, i));
+                        nyString.append(getCharFromString(s, i));
                     }
-                    nyString.append(getCharFromStringT(t, i));
+                    nyString.append(getCharFromString(t, i));
                 }
             }
 
@@ -249,11 +249,8 @@ public class Oblig1 {
         nyString.append(t);
         return nyString.toString();
         }
-    public static char getCharFromStringS(String s, int i){
+    public static char getCharFromString(String s, int i){
         return s.charAt(i);
-    }
-    public static char getCharFromStringT(String t, int i){
-        return t.charAt(i);
     }
 
     /// 7b)
